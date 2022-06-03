@@ -4,6 +4,7 @@ import android.content.Context
 import com.ands.newstestapp.R
 import java.text.SimpleDateFormat
 import java.util.*
+import java.util.Locale.US
 import java.util.concurrent.TimeUnit
 
 /**
@@ -15,12 +16,13 @@ class DateTimeMapper(
     private val context: Context
 ) : Mapper<String, String> {
 
-    private val dateInput = SimpleDateFormat(inputPattern)
-    private val dateOutput = SimpleDateFormat(outputPattern)
+    private val dateInput = SimpleDateFormat(inputPattern, US)
+    private val dateOutput = SimpleDateFormat(outputPattern, US)
 
     override fun map(source: String): String {
 
-        val past = dateInput.parse(source)!!
+        val past = dateInput.parse(source) ?: return ""
+
         val now = Date()
 
         val seconds: Long = TimeUnit.MILLISECONDS.toSeconds(now.time - past.time)
@@ -41,3 +43,4 @@ class DateTimeMapper(
 interface Mapper<S, R> {
     fun map(source: S): R
 }
+

@@ -5,30 +5,26 @@ import androidx.recyclerview.widget.RecyclerView
 import androidx.viewbinding.ViewBinding
 import com.ands.newstestapp.R
 import com.ands.newstestapp.common.DateTimeMapper
-import com.ands.newstestapp.data.models.Article
+import com.ands.newstestapp.data.models.ArticleUi
 
 /**
  * Created by Dad52(Sobolev) on 6/3/2022.
  */
 
 abstract class BaseViewHolder(
-    private val binding: ViewBinding
+    binding: ViewBinding,
 ) : RecyclerView.ViewHolder(binding.root), ItemBind {
 
-    override fun bind(article: Article) {
+    private val dateTimeMapper = DateTimeMapper(context = binding.root.context)
 
-        description().text = if (article.description == null || article.description.isEmpty())
-            itemView.context.getString(R.string.with_no_description)
-        else
-            article.description
+    override fun bind(articleUi: ArticleUi) {
 
-        author().text = if (article.author == null || article.author.isEmpty())
-            itemView.context.getString(R.string.with_no_author)
-        else
-            article.author
+        description().text = articleUi.description
 
-        headline().text = article.title
-        timeDate().text = DateTimeMapper(context = binding.root.context).map(article.publishedAt)
+        author().text = articleUi.author
+
+        headline().text = articleUi.title
+        timeDate().text = dateTimeMapper.map(articleUi.publishedAt)
     }
 
     abstract fun description(): TextView
@@ -38,5 +34,5 @@ abstract class BaseViewHolder(
 }
 
 interface ItemBind {
-    fun bind(article: Article)
+    fun bind(article: ArticleUi)
 }

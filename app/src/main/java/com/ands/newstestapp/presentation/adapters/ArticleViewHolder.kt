@@ -4,7 +4,7 @@ package com.ands.newstestapp.presentation.adapters
 import android.widget.TextView
 import androidx.viewbinding.ViewBinding
 import com.ands.newstestapp.common.ImageSource
-import com.ands.newstestapp.data.models.Article
+import com.ands.newstestapp.data.models.ArticleUi
 import com.ands.newstestapp.databinding.ArticlesItemWithImageBinding
 import com.ands.newstestapp.databinding.ArticlesItemWithoutImageBinding
 
@@ -28,11 +28,10 @@ sealed class ArticleViewHolder(binding: ViewBinding) : BaseViewHolder(binding) {
     class ArticleWithImageViewHolder(private val binding: ArticlesItemWithImageBinding) :
         BaseViewHolder(binding) {
 
-        override fun bind(article: Article) {
-            super.bind(article)
-            if (article.urlToImage != null)
+        override fun bind(articleUi: ArticleUi) {
+            super.bind(articleUi)
                 ImageSource.NetImageSource(
-                    url = article.urlToImage,
+                    url = articleUi.urlToImage,
                     radiusRoundedCorner = 12f
                 ).show(binding.image)
 
