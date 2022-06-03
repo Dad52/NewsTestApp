@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">NewsTestApp</string>
+    <string name="with_no_author">No author</string>
+    <string name="with_no_description">Description is empty</string>
+    <string name="placeholder_seconds_ago">%1$d seconds ago</string>
+    <string name="placeholder_minutes_ago">%1$d minutes ago</string>
+    <string name="placeholder_hours_ago">%1$d hours ago</string>
+    <string name="placeholder_days_ago">%1$d days ago</string>
+</resources>
