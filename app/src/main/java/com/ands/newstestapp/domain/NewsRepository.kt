@@ -1,5 +1,6 @@
 package com.ands.newstestapp.domain
 
+import com.ands.newstestapp.common.Resource
 import com.ands.newstestapp.data.models.NewsDTO
 import retrofit2.Response
 
@@ -8,6 +9,6 @@ import retrofit2.Response
  */
 interface NewsRepository {
 
-    suspend fun getNews(): Response<NewsDTO>
+    suspend fun getNews(): Resource<NewsDTO>
 
 }

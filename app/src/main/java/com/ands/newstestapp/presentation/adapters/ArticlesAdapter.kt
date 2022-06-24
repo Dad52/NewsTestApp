@@ -14,23 +14,20 @@ import com.ands.newstestapp.databinding.ArticlesItemWithoutImageBinding
 class ArticlesAdapter : ListAdapter<ArticleUi, BaseViewHolder>(ArticleDiffUtil()) {
 
     override fun onBindViewHolder(holder: BaseViewHolder, position: Int) {
-        when (holder) {
-            is ArticleViewHolder.ArticleWithImageViewHolder -> holder.bind(getItem(position))
-            is ArticleViewHolder.ArticleWithoutImageViewHolder -> holder.bind(getItem(position))
-        }
+        holder.bind(getItem(position))
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BaseViewHolder {
 
         when (viewType) {
-            ARTICLE_WITHOUT_IMAGE -> return ArticleViewHolder.ArticleWithoutImageViewHolder(
+            ARTICLE_WITHOUT_IMAGE -> return ArticleWithoutImageViewHolder(
                 ArticlesItemWithoutImageBinding.inflate(
                     LayoutInflater.from(parent.context),
                     parent,
                     false
                 )
             )
-            ARTICLE_WITH_IMAGE -> return ArticleViewHolder.ArticleWithImageViewHolder(
+            ARTICLE_WITH_IMAGE -> return ArticleWithImageViewHolder(
                 ArticlesItemWithImageBinding.inflate(
                     LayoutInflater.from(parent.context),
                     parent,

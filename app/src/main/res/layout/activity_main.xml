@@ -7,6 +7,15 @@
     android:background="@color/newsBackgroundColor"
     tools:context=".presentation.MainActivity">
 
+
+    <TextView
+        android:id="@+id/internetConnectionStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="TextView"
+        android:textSize="18sp" />
+
     <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
         android:id="@+id/reloadNews"
         android:layout_marginHorizontal="18dp"

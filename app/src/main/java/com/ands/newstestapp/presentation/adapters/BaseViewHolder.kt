@@ -3,8 +3,8 @@ package com.ands.newstestapp.presentation.adapters
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewbinding.ViewBinding
-import com.ands.newstestapp.R
-import com.ands.newstestapp.common.DateTimeMapper
+import com.ands.newstestapp.common.ItemBind
+import com.ands.newstestapp.common.Mapper
 import com.ands.newstestapp.data.models.ArticleUi
 
 /**
@@ -15,7 +15,7 @@ abstract class BaseViewHolder(
     binding: ViewBinding,
 ) : RecyclerView.ViewHolder(binding.root), ItemBind {
 
-    private val dateTimeMapper = DateTimeMapper(context = binding.root.context)
+    private val dateTimeMapper = Mapper.DateTimeMapper(context = binding.root.context)
 
     override fun bind(articleUi: ArticleUi) {
 
@@ -31,8 +31,4 @@ abstract class BaseViewHolder(
     abstract fun headline(): TextView
     abstract fun author(): TextView
     abstract fun timeDate(): TextView
-}
-
-interface ItemBind {
-    fun bind(article: ArticleUi)
 }
