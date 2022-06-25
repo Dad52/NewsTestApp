@@ -2,7 +2,6 @@ package com.ands.newstestapp.domain
 
 import com.ands.newstestapp.common.Resource
 import com.ands.newstestapp.data.models.NewsDTO
-import retrofit2.Response
 
 /**
  * Created by Dad52(Sobolev) on 6/2/2022.

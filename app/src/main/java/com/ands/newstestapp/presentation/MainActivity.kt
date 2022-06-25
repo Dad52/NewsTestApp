@@ -1,7 +1,6 @@
 package com.ands.newstestapp.presentation
 
 import android.os.Bundle
-import android.util.Log
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.isVisible
@@ -33,7 +32,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         newsViewModel.status.observe(this) {
-            when(it) {
+            when (it) {
                 is Resource.Success -> {
                     binding.reloadNews.isRefreshing = false
                     binding.internetConnectionStatus.isVisible = false

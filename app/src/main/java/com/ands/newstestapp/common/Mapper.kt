@@ -16,7 +16,7 @@ interface Mapper<S, R> {
     class DateTimeMapper(
         inputPattern: String = "yyyy-MM-dd'T'HH:mm:ss'Z'",
         outputPattern: String = "dd MMM",
-        private val context: Context
+        private val context: Context,
     ) : Mapper<String, String> {
 
         private val dateInput = SimpleDateFormat(inputPattern, US)

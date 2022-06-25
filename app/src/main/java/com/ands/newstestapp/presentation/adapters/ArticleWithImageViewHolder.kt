@@ -9,7 +9,7 @@ import com.ands.newstestapp.databinding.ArticlesItemWithImageBinding
  * Created by Dad52(Sobolev) on 6/4/2022.
  */
 class ArticleWithImageViewHolder(
-    private val binding: ArticlesItemWithImageBinding
+    private val binding: ArticlesItemWithImageBinding,
 ) : BaseViewHolder(binding) {
 
     override fun bind(articleUi: ArticleUi) {

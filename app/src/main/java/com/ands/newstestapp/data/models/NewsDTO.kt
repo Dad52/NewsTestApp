@@ -6,7 +6,7 @@ package com.ands.newstestapp.data.models
 data class NewsDTO(
     val status: String,
     val totalResults: Int,
-    val articles: List<Article>
+    val articles: List<Article>,
 )
 
 

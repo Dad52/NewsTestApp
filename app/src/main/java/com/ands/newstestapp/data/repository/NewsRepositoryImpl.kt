@@ -4,7 +4,6 @@ import com.ands.newstestapp.common.Resource
 import com.ands.newstestapp.data.api.NewsService
 import com.ands.newstestapp.data.models.NewsDTO
 import com.ands.newstestapp.domain.NewsRepository
-import retrofit2.Response
 
 /**
  * Created by Dad52(Sobolev) on 6/2/2022.

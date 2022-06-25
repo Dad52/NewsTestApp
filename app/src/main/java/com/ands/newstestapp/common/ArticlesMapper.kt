@@ -10,7 +10,7 @@ import com.ands.newstestapp.data.models.ArticleUi.Companion.EMPTY_URL
  * Created by Dad52(Sobolev) on 6/3/2022.
  */
 class ArticlesMapper(
-    private val context: Context
+    private val context: Context,
 ) : Mapper<List<Article>, List<ArticleUi>> {
     override fun map(source: List<Article>): List<ArticleUi> {
         return source.map { article ->

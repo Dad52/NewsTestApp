@@ -7,7 +7,7 @@ import com.ands.newstestapp.databinding.ArticlesItemWithoutImageBinding
  * Created by Dad52(Sobolev) on 6/2/2022.
  */
 class ArticleWithoutImageViewHolder(
-    private val binding: ArticlesItemWithoutImageBinding
+    private val binding: ArticlesItemWithoutImageBinding,
 ) : BaseViewHolder(binding) {
 
     override fun description(): TextView = binding.description

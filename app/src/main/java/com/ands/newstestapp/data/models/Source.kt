@@ -5,5 +5,5 @@ package com.ands.newstestapp.data.models
  */
 data class Source(
     val id: String? = null,
-    val name: String
+    val name: String,
 )

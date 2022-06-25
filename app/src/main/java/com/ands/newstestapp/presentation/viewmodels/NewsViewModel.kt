@@ -42,7 +42,8 @@ class NewsViewModel @Inject constructor(
         _status.value = news
 
         if (news is Resource.Success) {
-            val articlesUi = ArticlesMapper(myApplication.applicationContext).map(news.data!!.articles)
+            val articlesUi =
+                ArticlesMapper(myApplication.applicationContext).map(news.data!!.articles)
             _articlesList.postValue(articlesUi)
         }
     }
