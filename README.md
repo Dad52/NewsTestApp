@@ -1,7 +1,6 @@
-# NewsTestApp
-Новостная лента. 
+# Новостная лента
 
-Сами новости приходят с https://newsapi.org/
+Новости приходят с https://newsapi.org/
 Ниже скриншоты самого приложения.
 
 <div style="display: flex; flex-direction: row">
