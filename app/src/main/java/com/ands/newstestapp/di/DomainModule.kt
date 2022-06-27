@@ -15,7 +15,9 @@ import dagger.hilt.android.components.ViewModelComponent
 class DomainModule {
 
     @Provides
-    fun provideGetNewsUseCase(newsRepository: NewsRepository): GetNewsUseCase {
+    fun provideGetNewsUseCase(
+        newsRepository: NewsRepository,
+    ): GetNewsUseCase {
         return GetNewsUseCase(repository = newsRepository)
     }
 

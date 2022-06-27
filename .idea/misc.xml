@@ -10,6 +10,10 @@
         <entry key="..\:/Users/andre/AndroidStudioProjects/NewsTestApp/app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/Users/andre/AndroidStudioProjects/NewsTestApp/app/src/main/res/layout/articles_item_with_image.xml" value="0.33" />
         <entry key="..\:/Users/andre/AndroidStudioProjects/NewsTestApp/app/src/main/res/layout/articles_item_without_image.xml" value="0.5" />
+        <entry key="..\:/Users/andre/AndroidStudioProjects/NewsTestApp/app/src/main/res/layout/fragment_article_detail.xml" value="0.33" />
+        <entry key="..\:/Users/andre/AndroidStudioProjects/NewsTestApp/app/src/main/res/layout/fragment_news.xml" value="0.22" />
+        <entry key="..\:/Users/andre/AndroidStudioProjects/NewsTestApp/app/src/main/res/layout/fragment_news_detail.xml" value="0.33" />
+        <entry key="..\:/Users/andre/AndroidStudioProjects/NewsTestApp/app/src/main/res/layout/fragment_settings.xml" value="0.1911231884057971" />
         <entry key="..\:/Users/andre/AndroidStudioProjects/NewsTestApp/app/src/main/res/layout/news_item.xml" value="0.25" />
         <entry key="..\:/Users/andre/AndroidStudioProjects/NewsTestApp/app/src/main/res/layout/news_item_without_image.xml" value="0.22" />
       </map>

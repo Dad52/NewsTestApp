@@ -1,11 +1,11 @@
-package com.ands.newstestapp.presentation.adapters
+package com.ands.newstestapp.presentation.news.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.ListAdapter
-import com.ands.newstestapp.data.models.ArticleUi
 import com.ands.newstestapp.databinding.ArticlesItemWithImageBinding
 import com.ands.newstestapp.databinding.ArticlesItemWithoutImageBinding
+import com.ands.newstestapp.domain.models.ArticleUi
 
 
 /**
@@ -13,24 +13,27 @@ import com.ands.newstestapp.databinding.ArticlesItemWithoutImageBinding
  */
 class ArticlesAdapter : ListAdapter<ArticleUi, BaseViewHolder>(ArticleDiffUtil()) {
 
+    var onClickNewsItem: ((ArticleUi) -> Unit)? = null
+
     override fun onBindViewHolder(holder: BaseViewHolder, position: Int) {
-        when (holder) {
-            is ArticleViewHolder.ArticleWithImageViewHolder -> holder.bind(getItem(position))
-            is ArticleViewHolder.ArticleWithoutImageViewHolder -> holder.bind(getItem(position))
+        val item = getItem(position)
+        holder.bind(item)
+        holder.itemView.setOnClickListener() {
+            onClickNewsItem?.invoke(item)
         }
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BaseViewHolder {
 
         when (viewType) {
-            ARTICLE_WITHOUT_IMAGE -> return ArticleViewHolder.ArticleWithoutImageViewHolder(
+            ARTICLE_WITHOUT_IMAGE -> return ArticleWithoutImageViewHolder(
                 ArticlesItemWithoutImageBinding.inflate(
                     LayoutInflater.from(parent.context),
                     parent,
                     false
                 )
             )
-            ARTICLE_WITH_IMAGE -> return ArticleViewHolder.ArticleWithImageViewHolder(
+            ARTICLE_WITH_IMAGE -> return ArticleWithImageViewHolder(
                 ArticlesItemWithImageBinding.inflate(
                     LayoutInflater.from(parent.context),
                     parent,

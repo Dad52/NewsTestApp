@@ -7,20 +7,12 @@
     android:background="@color/newsBackgroundColor"
     tools:context=".presentation.MainActivity">
 
-    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
-        android:id="@+id/reloadNews"
-        android:layout_marginHorizontal="18dp"
-        android:layout_marginTop="18dp"
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/navHost"
+        android:name="androidx.navigation.fragment.NavHostFragment"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/newsList"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:overScrollMode="never" />
-
-    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
-
-
+        android:layout_height="match_parent"
+        app:defaultNavHost="true"
+        app:navGraph="@navigation/nav_graph" />
 </FrameLayout>
