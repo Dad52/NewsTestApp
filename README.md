@@ -1,4 +1,9 @@
 # NewsTestApp
+Новостная лента. 
+
+Сами новости приходят с https://newsapi.org/
+Ниже скриншоты самого приложения.
+
 <div style="display: flex; flex-direction: row">
 <img src="https://user-images.githubusercontent.com/93911341/176009176-3d30cf56-2a56-44e4-9fa0-ef561067a381.jpg" alt="drawing" width="300"/>
 <img src="https://user-images.githubusercontent.com/93911341/176009209-570e6c25-a91b-4021-ae8b-5b370eb7aff4.jpg" width="300"/>
