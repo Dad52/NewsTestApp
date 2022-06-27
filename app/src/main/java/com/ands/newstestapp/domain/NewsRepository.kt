@@ -1,5 +1,6 @@
 package com.ands.newstestapp.domain
 
+import com.ands.newstestapp.common.Categories
 import com.ands.newstestapp.common.Resource
 import com.ands.newstestapp.data.models.NewsDTO
 
@@ -8,6 +9,6 @@ import com.ands.newstestapp.data.models.NewsDTO
  */
 interface NewsRepository {
 
-    suspend fun getNews(): Resource<NewsDTO>
+    suspend fun getNews(category: Categories): Resource<NewsDTO>
 
 }

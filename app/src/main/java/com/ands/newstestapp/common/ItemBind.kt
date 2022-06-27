@@ -1,6 +1,6 @@
 package com.ands.newstestapp.common
 
-import com.ands.newstestapp.data.models.ArticleUi
+import com.ands.newstestapp.domain.models.ArticleUi
 
 /**
  * Created by Dad52(Sobolev) on 6/19/2022.

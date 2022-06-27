@@ -3,8 +3,8 @@ package com.ands.newstestapp.common
 import android.content.Context
 import com.ands.newstestapp.R
 import com.ands.newstestapp.data.models.Article
-import com.ands.newstestapp.data.models.ArticleUi
-import com.ands.newstestapp.data.models.ArticleUi.Companion.EMPTY_URL
+import com.ands.newstestapp.domain.models.ArticleUi
+import com.ands.newstestapp.domain.models.ArticleUi.Companion.EMPTY_URL
 
 /**
  * Created by Dad52(Sobolev) on 6/3/2022.

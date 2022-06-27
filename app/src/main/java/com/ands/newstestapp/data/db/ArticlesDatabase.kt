@@ -1,12 +1,5 @@
 package com.ands.newstestapp.data.db
 
-import androidx.room.Database
-import androidx.room.RoomDatabase
-import androidx.room.TypeConverter
-import androidx.room.TypeConverters
-import com.ands.newstestapp.data.models.ArticleUi
-import com.google.gson.Gson
-
 /**
  * Created by Dad52(Sobolev) on 6/24/2022.
  */

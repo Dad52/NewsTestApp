@@ -1,5 +1,6 @@
 package com.ands.newstestapp.domain.usecases
 
+import com.ands.newstestapp.common.Categories
 import com.ands.newstestapp.common.Resource
 import com.ands.newstestapp.data.models.NewsDTO
 import com.ands.newstestapp.domain.NewsRepository
@@ -9,8 +10,7 @@ import com.ands.newstestapp.domain.NewsRepository
  */
 class GetNewsUseCase(private val repository: NewsRepository) {
 
-    suspend fun getNews(): Resource<NewsDTO> {
-        return repository.getNews()
+    suspend fun getNews(category: Categories): Resource<NewsDTO> {
+        return repository.getNews(category)
     }
-
 }

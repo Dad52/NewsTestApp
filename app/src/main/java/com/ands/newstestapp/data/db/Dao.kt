@@ -2,7 +2,7 @@ package com.ands.newstestapp.data.db
 
 import androidx.room.Insert
 import androidx.room.Query
-import com.ands.newstestapp.data.models.ArticleUi
+import com.ands.newstestapp.domain.models.ArticleUi
 
 /**
  * Created by Dad52(Sobolev) on 6/24/2022.

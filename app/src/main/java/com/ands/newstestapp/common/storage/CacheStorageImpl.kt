@@ -1,7 +1,7 @@
 package com.ands.newstestapp.common.storage
 
 import android.util.Log
-import com.ands.newstestapp.data.models.ArticleUi
+import com.ands.newstestapp.domain.models.ArticleUi
 import java.io.FileInputStream
 import java.io.FileOutputStream
 import java.io.ObjectInputStream

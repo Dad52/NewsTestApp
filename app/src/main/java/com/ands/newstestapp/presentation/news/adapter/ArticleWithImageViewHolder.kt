@@ -1,9 +1,9 @@
-package com.ands.newstestapp.presentation.adapters
+package com.ands.newstestapp.presentation.news.adapter
 
 import android.widget.TextView
 import com.ands.newstestapp.common.ImageSource
-import com.ands.newstestapp.data.models.ArticleUi
 import com.ands.newstestapp.databinding.ArticlesItemWithImageBinding
+import com.ands.newstestapp.domain.models.ArticleUi
 
 /**
  * Created by Dad52(Sobolev) on 6/4/2022.

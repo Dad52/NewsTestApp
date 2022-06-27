@@ -1,11 +1,11 @@
-package com.ands.newstestapp.presentation.adapters
+package com.ands.newstestapp.presentation.news.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.ListAdapter
-import com.ands.newstestapp.data.models.ArticleUi
 import com.ands.newstestapp.databinding.ArticlesItemWithImageBinding
 import com.ands.newstestapp.databinding.ArticlesItemWithoutImageBinding
+import com.ands.newstestapp.domain.models.ArticleUi
 
 
 /**
@@ -13,8 +13,14 @@ import com.ands.newstestapp.databinding.ArticlesItemWithoutImageBinding
  */
 class ArticlesAdapter : ListAdapter<ArticleUi, BaseViewHolder>(ArticleDiffUtil()) {
 
+    var onClickNewsItem: ((ArticleUi) -> Unit)? = null
+
     override fun onBindViewHolder(holder: BaseViewHolder, position: Int) {
-        holder.bind(getItem(position))
+        val item = getItem(position)
+        holder.bind(item)
+        holder.itemView.setOnClickListener() {
+            onClickNewsItem?.invoke(item)
+        }
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BaseViewHolder {

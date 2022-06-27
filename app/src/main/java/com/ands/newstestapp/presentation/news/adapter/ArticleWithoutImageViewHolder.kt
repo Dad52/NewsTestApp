@@ -1,4 +1,4 @@
-package com.ands.newstestapp.presentation.adapters
+package com.ands.newstestapp.presentation.news.adapter
 
 import android.widget.TextView
 import com.ands.newstestapp.databinding.ArticlesItemWithoutImageBinding
