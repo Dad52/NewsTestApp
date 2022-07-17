@@ -39,7 +39,7 @@ interface Mapper<S, R> {
                 hours < 24 -> context.getString(R.string.placeholder_hours_ago, hours)
                 days < 7 -> context.getString(R.string.placeholder_days_ago, days)
                 else -> return dateOutput.format(past)
-            }
+            }//todo вынести это отсюда и сделать получение строк в другом месте
         }
     }
 
