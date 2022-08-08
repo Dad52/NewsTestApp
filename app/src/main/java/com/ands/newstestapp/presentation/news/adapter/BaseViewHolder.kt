@@ -15,14 +15,12 @@ abstract class BaseViewHolder(
     binding: ViewBinding,
 ) : RecyclerView.ViewHolder(binding.root), ItemBind {
 
-    private val dateTimeMapper = Mapper.DateTimeMapper(context = binding.root.context)
-
     override fun bind(articleUi: ArticleUi) {
 
         description().text = articleUi.description
         author().text = articleUi.author
         headline().text = articleUi.title
-        timeDate().text = dateTimeMapper.map(articleUi.publishedAt)
+        timeDate().text = articleUi.publishedAt
 
     }
 

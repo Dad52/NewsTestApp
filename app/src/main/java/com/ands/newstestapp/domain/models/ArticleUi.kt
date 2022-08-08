@@ -13,6 +13,7 @@ data class ArticleUi(
     val description: String,
     val urlToImage: String,
     val publishedAt: String,
+    val content: String
 ) : Parcelable {
     companion object {
         const val EMPTY_URL = ""

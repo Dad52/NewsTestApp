@@ -11,16 +11,17 @@ import com.ands.newstestapp.domain.models.ArticleUi.Companion.EMPTY_URL
  */
 class ArticlesMapper(
     private val context: Context,
+    private val dateTimeMapper: Mapper.DateTimeMapper
 ) : Mapper<List<Article>, List<ArticleUi>> {
     override fun map(source: List<Article>): List<ArticleUi> {
         return source.map { article ->
             ArticleUi(
                 author = article.author ?: context.getString(R.string.with_no_author),
                 title = article.title,
-                description = article.description
-                    ?: context.getString(R.string.with_no_description),
+                description = article.description ?: context.getString(R.string.with_no_description),
                 urlToImage = article.urlToImage ?: EMPTY_URL,
-                publishedAt = article.publishedAt
+                publishedAt = dateTimeMapper.map(article.publishedAt),
+                content = article.content ?: context.getString(R.string.with_no_description),
             )
         }
     }

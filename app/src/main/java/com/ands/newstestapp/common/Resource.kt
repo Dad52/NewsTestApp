@@ -11,5 +11,5 @@ sealed class Resource<T>(
 
     class Error<T>(errorMessage: String) : Resource<T>(message = errorMessage)
 
-    class Loading<T>(loadingMessage: String = "Loading..") : Resource<T>(message = loadingMessage)
+    class Loading<T>(loadingMessage: String = "Загрузка") : Resource<T>(message = loadingMessage)
 }
