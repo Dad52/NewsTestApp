@@ -12,6 +12,8 @@ import retrofit2.http.Query
 interface NewsService {
 
     @GET("top-headlines?country=us")
-    suspend fun getNews(@Query("category") categories: Categories): Response<NewsDTO>
+    suspend fun getNews(
+        @Query("category") categories: Categories
+    ): Response<NewsDTO>
 
 }
