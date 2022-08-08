@@ -13,6 +13,8 @@ import com.ands.newstestapp.data.models.NewsDTO
 import com.ands.newstestapp.domain.models.ArticleUi
 import com.ands.newstestapp.domain.usecases.GetNewsUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.CoroutineDispatcher
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
@@ -23,6 +25,7 @@ import javax.inject.Inject
 class NewsViewModel @Inject constructor(
     private val getNewsUseCase: GetNewsUseCase,
     private val myApplication: Application,
+    private val dispatchersIO: CoroutineDispatcher = Dispatchers.IO
 ) : AndroidViewModel(myApplication) {
 
     private val _articlesList = MutableLiveData<List<ArticleUi>>()
@@ -42,7 +45,7 @@ class NewsViewModel @Inject constructor(
         loadNews()
     }
 
-    fun loadNews() = viewModelScope.launch {
+    fun loadNews() = viewModelScope.launch(dispatchersIO) {
 
         _status.value = Resource.Loading()
 

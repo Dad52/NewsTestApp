@@ -14,8 +14,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.NewsTestApp">
         <activity
-            android:name=".presentation.MainActivity"
-            android:exported="true">
+            android:name=".presentation.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
