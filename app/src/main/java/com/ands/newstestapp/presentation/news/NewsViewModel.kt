@@ -61,15 +61,3 @@ class NewsViewModel @Inject constructor(
         }
     }
 }
-
-//abstract class BaseViewModel : ViewModel() {
-//
-//    private val _failure: MutableLiveData<Failure> = MutableLiveData()
-//    val failure: LiveData<Failure> = _failure
-//
-//    protected fun handleFailure(failure: Failure) {
-//        _failure.value = failure
-//    }
-//}
-// todo https://russianblogs.com/article/59082410816/
-// todo https://github.com/android10/Android-CleanArchitecture-Kotlin/blob/main/app/src/main/kotlin/com/fernandocejas/sample/core/platform/BaseViewModel.kt
